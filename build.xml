@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="TemplateProject">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../eclipse/jee-2021-09/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Server Runtime [Apache Tomcat v9.0].libraryclasspath">
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-api.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/catalina.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/el-api.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-jdbc.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/ecj-4.18.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-util-scan.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/catalina-ssi.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-i18n-cs.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-dbcp.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-websocket.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/servlet-api.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-jni.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/jasper-el.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-i18n-de.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/catalina-ha.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/jsp-api.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/catalina-ant.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-coyote.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/websocket-api.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/jaspic-api.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/annotations-api.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-i18n-zh-CN.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/jasper.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-util.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/catalina-storeconfig.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/catalina-tribes.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-i18n-ru.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-i18n-ko.jar"/>
+        <pathelement location="../../eclipse-workspace/apache-tomcat-9.0.46/lib/tomcat-i18n-pt-BR.jar"/>
+    </path>
+    <path id="Maven Dependencies.libraryclasspath">
+        <pathelement location="../../.m2/repository/org/json/json/20210307/json-20210307.jar"/>
+        <pathelement location="../../.m2/repository/com/google/code/gson/gson/2.8.2/gson-2.8.2.jar"/>
+        <pathelement location="../../.m2/repository/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar"/>
+        <pathelement location="../../.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/jersey/core/jersey-client/2.30/jersey-client-2.30.jar"/>
+        <pathelement location="../../.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/2.1.6/jakarta.ws.rs-api-2.1.6.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/jersey/core/jersey-common/2.30/jersey-common-2.30.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.3/osgi-resource-locator-1.0.3.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/hk2/external/jakarta.inject/2.6.1/jakarta.inject-2.6.1.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/jersey/inject/jersey-hk2/2.30/jersey-hk2-2.30.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/hk2/hk2-locator/2.6.1/hk2-locator-2.6.1.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.6.1/aopalliance-repackaged-2.6.1.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/hk2/hk2-api/2.6.1/hk2-api-2.6.1.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/hk2/hk2-utils/2.6.1/hk2-utils-2.6.1.jar"/>
+        <pathelement location="../../.m2/repository/org/javassist/javassist/3.25.0-GA/javassist-3.25.0-GA.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.29/jersey-container-servlet-core-2.29.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/jersey/core/jersey-server/2.29/jersey-server-2.29.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.29/jersey-media-jaxb-2.29.jar"/>
+        <pathelement location="../../.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar"/>
+        <pathelement location="../../.m2/repository/com/sun/xml/ws/jaxws-rt/2.3.3-b01/jaxws-rt-2.3.3-b01.jar"/>
+        <pathelement location="../../.m2/repository/com/sun/xml/ws/policy/2.7.9/policy-2.7.9.jar"/>
+        <pathelement location="../../.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.3-b02/jaxb-impl-2.3.3-b02.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/ha/ha-api/3.1.12/ha-api-3.1.12.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/external/management-api/3.2.2/management-api-3.2.2.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/gmbal/gmbal/4.0.1/gmbal-4.0.1.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/pfl/pfl-tf/4.1.0/pfl-tf-4.1.0.jar"/>
+        <pathelement location="../../.m2/repository/org/glassfish/pfl/pfl-basic/4.1.0/pfl-basic-4.1.0.jar"/>
+        <pathelement location="../../.m2/repository/org/jvnet/staxex/stax-ex/1.8.2/stax-ex-1.8.2.jar"/>
+        <pathelement location="../../.m2/repository/com/sun/xml/stream/buffer/streambuffer/1.5.8/streambuffer-1.5.8.jar"/>
+        <pathelement location="../../.m2/repository/org/jvnet/mimepull/mimepull/1.9.12/mimepull-1.9.12.jar"/>
+        <pathelement location="../../.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.17/FastInfoset-1.2.17.jar"/>
+        <pathelement location="../../.m2/repository/com/sun/activation/jakarta.activation/1.2.1/jakarta.activation-1.2.1.jar"/>
+        <pathelement location="../../.m2/repository/com/sun/xml/messaging/saaj/saaj-impl/1.5.2-b01/saaj-impl-1.5.2-b01.jar"/>
+        <pathelement location="../../.m2/repository/com/fasterxml/woodstox/woodstox-core/5.1.0/woodstox-core-5.1.0.jar"/>
+        <pathelement location="../../.m2/repository/org/codehaus/woodstox/stax2-api/4.1/stax2-api-4.1.jar"/>
+        <pathelement location="../../.m2/repository/jakarta/xml/ws/jakarta.xml.ws-api/2.3.2/jakarta.xml.ws-api-2.3.2.jar"/>
+        <pathelement location="../../.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar"/>
+        <pathelement location="../../.m2/repository/jakarta/xml/soap/jakarta.xml.soap-api/1.4.1/jakarta.xml.soap-api-1.4.1.jar"/>
+        <pathelement location="../../.m2/repository/jakarta/jws/jakarta.jws-api/1.1.1/jakarta.jws-api-1.1.1.jar"/>
+        <pathelement location="../../.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar"/>
+        <pathelement location="../../.m2/repository/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar"/>
+        <pathelement location="../../.m2/repository/org/freemarker/freemarker/2.3.29/freemarker-2.3.29.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar"/>
+        <pathelement location="../../.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar"/>
+        <pathelement location="../../.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"/>
+        <pathelement location="../../.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar"/>
+        <pathelement location="../../.m2/repository/mysql/mysql-connector-java/8.0.27/mysql-connector-java-8.0.27.jar"/>
+        <pathelement location="../../.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar"/>
+    </path>
+    <path id="TemplateProject.classpath">
+        <pathelement location="target/classes"/>
+        <path refid="Server Runtime [Apache Tomcat v9.0].libraryclasspath"/>
+        <path refid="Maven Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="target/classes"/>
+        <copy includeemptydirs="false" todir="target/classes">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="target/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="TemplateProject.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="war" description="Bundles the application as a WAR file" depends="clean, build">
+    	<mkdir dir="WebContent/WEB-INF/classes" />
+
+    	<copy includeemptydirs="false" todir="WebContent/WEB-INF/classes">
+        	<fileset dir="build/classes">
+         		<include name="**/*.class" />
+            </fileset>
+        </copy>
+
+        <war destfile="build/TemplateProject.war" basedir="WebContent" needxmlfile="false"></war>
+    </target>
+</project>

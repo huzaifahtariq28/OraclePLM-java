@@ -1,0 +1,66 @@
+<div id="attachments_div" class="col-md-10 col-md-offset-1">
+	
+	<div class="header">
+  		<h1>ATTACHMENTS</h1>
+  		<div class="header-right">
+		    <button id="createBtn" type="button" class="btn btn-success" data-bind="click: $root.createModal"><i class="glyphicon glyphicon-plus-sign"></i>New Attachment</button>
+			<button id="refreshBtn" type="button" class="btn btn-secondary" data-bind="click: $root.refreshAttachment"><i class="glyphicon glyphicon-refresh"></i>Refresh</button>
+		</div>
+	</div>
+	
+	<div id="createModal" class="modal">
+  		<div class="modal-content">
+  			<form method="post" action="UploadAttachment" enctype="multipart/form-data">
+  				<input type="hidden" name="itemId" data-bind="value: itemId" />
+				<p>Attachment Name: <input name="attachmentName" required/></p>
+				<p>Attachment Description: <input name="attachmentDescription" required/></p>
+				<p>Select file to upload: 
+					<input type="file" name="attachmentFile" accept="image/gif, image/jpeg, image/png, image/jpg, image/jfif, application/pdf" required/>
+				</p>
+				<button class="btn btn-success" type="submit">Upload</button>
+			</form>
+			<button class="btn btn-danger" id="createClose">Cancel</button>
+	  	</div>
+	</div>
+	
+	<div id="deleteModal" class="modal">
+		<div class="modal-content">
+			<form>
+	        	<h3>Are you sure you want to delete?</h3>
+	        	<br>
+	        	<br>
+				<button class="btn btn-danger" data-bind="click: $root.deleteAttachment">Delete</button>
+			</form>
+			<button class="btn btn-secondary" id="deleteClose">Cancel</button>
+	  	</div>
+	</div>
+	
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+		        <th>Attachment ID</th>
+		        <th>Item ID</th>
+		        <th>Attachment Name</th>
+		        <th>Attachment Description</th>
+		        <th>Actions</th>
+    		</tr>
+    	</thead>
+	    <tbody data-bind="foreach: attachments">
+	        <tr>
+	            <td data-bind="text: attachmentId" ></td>
+	            <td data-bind="text: itemId" ></td>
+	            <td data-bind="text: attachmentName" ></td>
+	            <td data-bind="text: attachmentDescription" ></td>
+	            <td>
+	            	<form action="DownloadAttachment" method="Post" target="_blank">
+	            		<input type= "hidden" name="attachmentId" data-bind="value: attachmentId" />
+    					<button id="attachmentView" class="btn btn-success" type="submit"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;&nbsp;View</button>
+					</form>
+					<button id="attachmentDelete" type="button" class="btn btn-danger" data-bind="click: $root.deleteModal"><i class="glyphicon glyphicon-trash"></i></button>
+	            </td>
+	        </tr>    
+	    </tbody>
+	</table>
+	
+	
+</div>

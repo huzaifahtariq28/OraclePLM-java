@@ -1,0 +1,70 @@
+<div id="bom_div" class="col-md-10 col-md-offset-1">
+	
+	<div class="header">
+  		<h1>BOM</h1>
+  		<div class="header-right">
+		    <button id="createBtn" type="button" class="btn btn-success" data-bind="click: $root.createModal"><i class="glyphicon glyphicon-plus-sign"></i>New BOM</button>
+			<button id="refreshBtn" type="button" class="btn btn-secondary" data-bind="click: $root.refreshBOM"><i class="glyphicon glyphicon-refresh"></i>Refresh</button>
+		</div>
+	</div>
+	
+	<div id="createModal" class="modal">
+  		<div class="modal-content">
+  			<form>
+				<p>BOM Name: <input data-bind="value: bomName" required/></p>
+				<p>BOM Description: <input data-bind="value: bomDescription" required/></p>
+				<button class="btn btn-success" data-bind="click: createBOM" type="submit">Create</button>
+			</form>
+			<button class="btn btn-danger" id="createClose">Cancel</button>
+	  	</div>
+	</div>
+	
+	<div id="editModal" class="modal">
+		<div class="modal-content">
+			<form>
+				<p>BOM Name: <input data-bind="value: newBomName" required/></p>
+				<p>BOM Description: <input data-bind="value: newBomDescription" required/></p>
+				<button id="editUpdate" class="btn btn-success" data-bind="click: editBOM" type="submit">Update</button>
+			</form>
+			<button class="btn btn-danger" id="editClose">Cancel</button>
+	  	</div>
+	</div>
+	
+	<div id="deleteModal" class="modal">
+		<div class="modal-content">
+			<form>
+	        	<h3>Are you sure you want to delete?</h3>
+	        	<br>
+	        	<br>
+				<button class="btn btn-danger" data-bind="click: $root.deleteBOM">Delete</button>
+			</form>
+			<button class="btn btn-secondary" id="deleteClose">Cancel</button>
+	  	</div>
+	</div>
+	
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+		        <th>BOM ID</th>
+		        <th>Item ID</th>
+		        <th>BOM Name</th>
+		        <th>BOM Description</th>
+		        <th>Actions</th>
+    		</tr>
+    	</thead>
+	    <tbody data-bind="foreach: boms">
+	        <tr>
+	            <td data-bind="text: bomId" ></td>
+	            <td data-bind="text: itemId" ></td>
+	            <td data-bind="text: bomName" ></td>
+	            <td data-bind="text: bomDescription" ></td>
+	            <td>
+	            	<button type="button" class="btn btn-primary" data-bind="click: $root.editModal">Edit</button>
+	            	<button type="button" class="btn btn-danger" data-bind="click: $root.deleteModal">Remove</button>
+	            </td>
+	        </tr>    
+	    </tbody>
+	</table>
+	
+	
+</div>

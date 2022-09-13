@@ -1,0 +1,91 @@
+<div id="items_div" class="col-md-10 col-md-offset-1">
+	
+	<div class="header">
+  		<h1>ITEMS</h1>
+  		<div class="header-right">
+		    <button id="createBtn" type="button" class="btn btn-success" data-bind="click: $root.createModal"><i class="glyphicon glyphicon-plus-sign"></i>New Item</button>
+			<button id="refreshBtn" type="button" class="btn btn-secondary" data-bind="click: $root.refreshItems"><i class="glyphicon glyphicon-refresh"></i>Refresh</button>
+			<button id="cloudBtn" type="button" class="btn btn-info" data-bind="click: $root.cloudData"><i class="glyphicon glyphicon-cloud-download"></i>Cloud Data</button>
+		</div>
+	</div>
+	
+	<div id="createModal" class="modal">
+  		<div class="modal-content">
+  			<form>
+				<p>Item Name: <input data-bind="value: itemName" type="text" required /></p>
+				<p>Item Class: <input data-bind="value: itemClass" type="text" required /></p>
+				<p>Item Description: <input data-bind="value: itemDescription" type="text" required /></p>
+				<button class="btn btn-success" data-bind="click: createItems" type="submit">Create</button>
+			</form>
+			<button class="btn btn-danger" id="createClose">Cancel</button>
+	  	</div>
+	</div>
+	
+	<div id="editModal" class="modal">
+		<div class="modal-content">
+			<form>
+	        	<p>Item Name: <input data-bind="value: newItemName" required/></p>
+				<p>Item Class: <input data-bind="value: newItemClass" required/></p>
+				<p>Item Description: <input data-bind="value: newItemDescription" required/></p>
+				<button class="btn btn-success" data-bind="click: $root.editItems" type="submit">Update</button>
+			</form>
+			<button class="btn btn-danger" id="editClose">Cancel</button>
+	  	</div>
+	</div>
+	
+	<div id="deleteModal" class="modal">
+		<div class="modal-content">
+			<form>
+	        	<h3>Are you sure you want to delete?</h3>
+	        	<br>
+	        	<br>
+				<button class="btn btn-danger" data-bind="click: $root.deleteItem">Delete</button>
+			</form>
+			<button class="btn btn-secondary" id="deleteClose">Cancel</button>
+	  	</div>
+	</div>
+	
+	<div class="table-responsive">
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+			        <th>Item ID</th>
+			        <th>Item Name</th>
+			        <th>Item Class</th>
+			        <th>Item Description</th>
+			        <th>Actions</th>
+	    		</tr>
+	    	</thead>
+		    <tbody data-bind="foreach: items">
+		        <tr>
+		            <td data-bind="text: itemId" ></td>
+		            <td data-bind="text: itemName" ></td>
+		            <td data-bind="text: itemClass" ></td>
+		            <td data-bind="text: itemDescription" ></td>
+		            <td>
+		            	<button type="button" class="btn btn-default" data-bind="click: $root.editModal">
+		            		<span class="glyphicon glyphicon-edit" aria-hidden="true" style="color:blue"></span>
+		            	</button>
+		            	<button type="button" class="btn btn-default" data-bind="click: $root.deleteModal">
+		            		<span class="glyphicon glyphicon-trash" aria-hidden="true" style="color:red"></span>
+		            	</button>
+		            	<button type="button" class="btn btn-default" data-bind="click: $root.listAttachments">
+		            		<span class="glyphicon glyphicon-paperclip" aria-hidden="true" style="color:green"></span>
+		            	</button>
+		            	<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    	More
+						    	<span class="caret"></span>
+						  	</button>
+						  	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    	<li data-bind="click: $root.listBOM">BOM</li>
+						    	<li data-bind="click: $root.listAML">AML</li>
+						  	</ul>
+						</div>
+		            </td>
+		        </tr>    
+		    </tbody>
+		</table>
+	</div>
+	
+</div>
