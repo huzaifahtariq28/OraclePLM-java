@@ -13,7 +13,7 @@ Secure Access: Ensures data integrity and security during operations.
 
 **Prerequisites**
 
-JDK 1.8 or later
-Oracle PLM Access
-Maven (for project building)
-Suitable IDE like IntelliJ IDEA or Eclipse
+- JDK 1.8 or later
+- Oracle PLM Access
+- Maven (for project building)
+- Suitable IDE like IntelliJ IDEA or Eclipse
