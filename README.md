@@ -73,29 +73,17 @@ logs.path=.
 
 ## Usage
 
-### Create Configuration File:
+1. Create a config.properties file at src/com/gosaas/constants/.
 
-Create a config.properties file at src/com/gosaas/constants/.
+2. Configure Oracle PD and MySQL connection details in the application as explained in the previous step.
 
-### Configure Database Connections:
+3. Open the application in Eclipse and wait while the IDE resolves Maven dependencies.
 
-Configure Oracle PD and MySQL connection details in the application as explained in the previous step.
+4. Install Tomcat 9.0 server through the IDE.
 
-### Open in Eclipse:
+5. Run the application through Tomcat.
 
-Open the application in Eclipse and wait while the IDE resolves Maven dependencies.
-
-### Install Tomcat Server:
-
-Install Tomcat 9.0 server through the IDE.
-
-### Run the Application:
-
-Run the application through Tomcat.
-
-### Access the Application:
-
-Access the application in your web browser and explore the CRUD functionality.
+6. Access the application in your web browser and explore the CRUD functionality.
 
 ## Contributing
 
