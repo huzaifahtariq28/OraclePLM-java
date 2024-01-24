@@ -7,8 +7,8 @@ Welcome to the OraclePLM-java repository, your go-to resource for a feature-rich
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Configuration](#configuration)
+- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -73,41 +73,27 @@ logs.path=.
 
 ## Usage
 
-1. Create Configuration File:
+### Create Configuration File:
 
 Create a config.properties file at src/com/gosaas/constants/.
 
-2. Configure Database Connections:
+### Configure Database Connections:
 
 Configure Oracle PD and MySQL connection details in the application as explained in the previous step.
 
-3. Open in Eclipse:
+### Open in Eclipse:
 
 Open the application in Eclipse and wait while the IDE resolves Maven dependencies.
 
-4. Install Tomcat Server:
+### Install Tomcat Server:
 
 Install Tomcat 9.0 server through the IDE.
 
-5. Run the Application:
+### Run the Application:
 
 Run the application through Tomcat.
 
-6. Access the Application:
-
-Access the application in your web browser and explore the CRUD functionality.
-
-## Usage
-
-Create a config.properties file at src/com/gosaas/constants/
-
-Configure Oracle PD and MySQL connection details in the application as explained in the previous step.
-
-Open the application in Eclipse and wait while the IDE resolved the maven dependencies.
-
-Install Tomcat 9.0 server through the IDE.
-
-Run the application through tomcat.
+### Access the Application:
 
 Access the application in your web browser and explore the CRUD functionality.
 
